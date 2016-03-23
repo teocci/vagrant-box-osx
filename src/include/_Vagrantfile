@@ -1,12 +1,12 @@
 Vagrant.configure("2") do |config|
     # Set welcome message
-    config.vm.post_up_message = "Welcome to Mac OS X Yosemite box. Issue tracker: https://github.com/AndrewDryga/vagrant-box-osx"
+    #config.vm.post_up_message = "Welcome to Mac OS X Yosemite box. Issue tracker: https://github.com/AndrewDryga/vagrant-box-osx"
 
     # Synced folder are not supported under Mac OS X
     config.vm.synced_folder ".", "/vagrant", :disabled => true
 
     # Temporary fix for annoying "Replace key" issue
-    config.ssh.insert_key = false
+    #config.ssh.insert_key = false
 
     config.vm.provider "virtualbox" do |vb|
         # Fix "hfs mounted macintosh hd on device root_device" issue
